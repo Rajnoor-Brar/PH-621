@@ -13,9 +13,13 @@ int main(){
 	for (i=1;i<n;i++){
 		term *= (-1*xx*(2*i-1)/((2*i+1)*i));
 		result += term;
-		if ((term<precision && term>0)||(term<0 && term>(-1*precision))){printf("\t Term (%g) is below precision threshold. Breaking at step %d.\n",term,i);break;}
+		if ( (term<precision && term>0) || (term<0 && term>(-1*precision)) ){
+			printf("\t\t Term (%g) is below precision threshold. Breaking at step %d.\n",term,i);break;
+		}
 	}
-	if ((term>precision && term>0)||(term<0 && term<(-1*precision))){printf("\t Last term (%g) has NOT dropped below precision threshold. Answer may not be accurate.\n", term);}
+	if ( (term>precision && term>0) || (term<0 && term<(-1*precision)) ){
+		printf("\t Last term (%g) has NOT dropped below precision threshold. Answer may not be accurate.\n", term);
+	}
 
 	result *= 1.128379671;
 

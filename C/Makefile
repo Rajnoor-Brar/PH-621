@@ -14,7 +14,7 @@ endif
 
 CFLAGS ?= -std=c17 -O2 -Wall -Wextra
 
-.PHONY: clean
+.PHONY: clean cleanall
 
 %:
 	@if [ -f "$@.c" ]; then \
@@ -27,3 +27,6 @@ CFLAGS ?= -std=c17 -O2 -Wall -Wextra
 
 clean:
 	rm -f *.exe
+
+cleanall:
+	rm -f */*.exe
