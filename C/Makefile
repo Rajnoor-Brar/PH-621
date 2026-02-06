@@ -25,6 +25,16 @@ CFLAGS ?= -std=c17 -O2 -Wall -Wextra
 		exit 1; \
 	fi
 
+%.exe: %.c
+	@$(CC) $(CPPFLAGS) $(CFLAGS) $< -o $@ $(LDFLAGS)
+	@echo "$< -> $@"
+
+%.c:
+	SRC:=$(patsubst %.c,%,$@)
+	@$(CC) $(CPPFLAGS) $(CFLAGS) $@ -o $(SRC).exe $(LDFLAGS)
+	@echo "$@ -> $(SRC).exe"
+
+
 clean:
 	rm -f *.exe
 

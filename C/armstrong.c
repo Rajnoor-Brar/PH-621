@@ -84,7 +84,6 @@ int main(){
 	if(nCount==0){
 		printf("No Armstrong numbers found between %d and %d \n",a,b);return -1;
 	}
-
 	for(i=0;i<nCount;i++){
 		if(i==0){
 			printf("Armstrong numbers are %d", armStrongs[0]);

@@ -1,0 +1,76 @@
+Notice (prac/logE.h : 28): Term (1.31137e-13) is below precision threshold (1e-12). Breaking at step 14. 
+
+Notice (prac/powE.h : 14): Term (6.91223e-13) is below precision threshold (1e-12). Breaking at step 18. 
+
+Notice (prac/logE.h : 28): Term (5.24288e-14) is below precision threshold (1e-12). Breaking at step 10. 
+
+Notice (prac/powE.h : 14): Term (6.39475e-13) is below precision threshold (1e-12). Breaking at step 22. 
+
+Notice (prac/logE.h : 28): Term (1.31137e-13) is below precision threshold (1e-12). Breaking at step 14. 
+
+Notice (prac/powE.h : 14): Term (2.50574e-13) is below precision threshold (1e-12). Breaking at step 25. 
+
+Notice (prac/logE.h : 28): Term (3.93412e-13) is below precision threshold (1e-12). Breaking at step 7. 
+
+Notice (prac/powE.h : 14): Term (2.04114e-13) is below precision threshold (1e-12). Breaking at step 27. 
+
+Notice (prac/logE.h : 28): Term (5.24288e-14) is below precision threshold (1e-12). Breaking at step 10. 
+
+Notice (prac/powE.h : 14): Term (5.44591e-13) is below precision threshold (1e-12). Breaking at step 28. 
+
+Notice (prac/logE.h : 28): Term (1.05137e-13) is below precision threshold (1e-12). Breaking at step 12. 
+
+Notice (prac/powE.h : 14): Term (8.47479e-13) is below precision threshold (1e-12). Breaking at step 29. 
+
+Notice (prac/logE.h : 28): Term (1.31137e-13) is below precision threshold (1e-12). Breaking at step 14. 
+
+Notice (prac/powE.h : 14): Term (9.25926e-13) is below precision threshold (1e-12). Breaking at step 30. 
+
+Notice (prac/logE.h : 28): Term (2.91784e-14) is below precision threshold (1e-12). Breaking at step 6. 
+
+Notice (prac/powE.h : 14): Term (7.88223e-13) is below precision threshold (1e-12). Breaking at step 31. 
+
+Notice (prac/logE.h : 28): Term (3.93412e-13) is below precision threshold (1e-12). Breaking at step 7. 
+
+Notice (prac/powE.h : 14): Term (5.57213e-13) is below precision threshold (1e-12). Breaking at step 32. 
+
+Notice (prac/logE.h : 28): Term (9.45181e-13) is below precision threshold (1e-12). Breaking at step 8. 
+
+Notice (prac/powE.h : 14): Term (3.40981e-13) is below precision threshold (1e-12). Breaking at step 33. 
+
+Notice (prac/logE.h : 28): Term (5.24288e-14) is below precision threshold (1e-12). Breaking at step 10. 
+
+Notice (prac/powE.h : 14): Term (1.85834e-13) is below precision threshold (1e-12). Breaking at step 34. 
+
+Notice (prac/logE.h : 28): Term (8.1614e-14) is below precision threshold (1e-12). Breaking at step 11. 
+
+Notice (prac/powE.h : 14): Term (5.46086e-13) is below precision threshold (1e-12). Breaking at step 34. 
+
+Notice (prac/logE.h : 28): Term (1.05137e-13) is below precision threshold (1e-12). Breaking at step 12. 
+
+Notice (prac/powE.h : 14): Term (2.49431e-13) is below precision threshold (1e-12). Breaking at step 35. 
+
+Notice (prac/logE.h : 28): Term (1.2141e-13) is below precision threshold (1e-12). Breaking at step 13. 
+
+Notice (prac/powE.h : 14): Term (6.15498e-13) is below precision threshold (1e-12). Breaking at step 35. 
+
+Notice (prac/logE.h : 28): Term (1.31137e-13) is below precision threshold (1e-12). Breaking at step 14. 
+
+Notice (prac/powE.h : 14): Term (2.48624e-13) is below precision threshold (1e-12). Breaking at step 36. 
+
+Notice (prac/logE.h : 28): Term (2.15464e-14) is below precision threshold (1e-12). Breaking at step 5. 
+
+Notice (prac/powE.h : 14): Term (5.41653e-13) is below precision threshold (1e-12). Breaking at step 36. 
+
+Notice (prac/logE.h : 28): Term (2.91784e-14) is below precision threshold (1e-12). Breaking at step 6. 
+
+Notice (prac/powE.h : 14): Term (1.99747e-13) is below precision threshold (1e-12). Breaking at step 37. 
+
+Notice (prac/logE.h : 28): Term (1.34801e-14) is below precision threshold (1e-12). Breaking at step 7. 
+
+Notice (prac/powE.h : 14): Term (3.96541e-13) is below precision threshold (1e-12). Breaking at step 37. 
+
+Notice (prac/logE.h : 28): Term (3.93412e-13) is below precision threshold (1e-12). Breaking at step 7. 
+
+Notice (prac/powE.h : 14): Term (7.51284e-13) is below precision threshold (1e-12). Breaking at step 37. 
+
