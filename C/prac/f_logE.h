@@ -1,7 +1,8 @@
-#include"logStream.h"
+#pragma once
+
+#include"u_logStream.h"
 #include<stdlib.h>
 
-#pragma once
 double logE(double x){ 
 
 	if (x <= 0.0){ERROR(POSITIVE_DOMAIN); exit(1);} 

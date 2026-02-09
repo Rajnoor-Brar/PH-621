@@ -6,8 +6,7 @@ static FILE *warningFile = NULL;
 
 static FILE *noticeFile = NULL;
 
-static FILE *warningLog(void)
-{
+static FILE *warningLog(void){
     if (!warningFile) {
         warningFile = fopen("log_Warnings.txt", "a+");
         if (!warningFile) {
@@ -18,8 +17,7 @@ static FILE *warningLog(void)
     return warningFile;
 }
 
-static FILE *noticeLog(void)
-{
+static FILE *noticeLog(void){
     if (!noticeFile) {
         noticeFile = fopen("log_Notices.txt", "a+");
         if (!noticeFile) {

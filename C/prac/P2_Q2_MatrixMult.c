@@ -1,5 +1,7 @@
 #include<stdio.h>
-#include "inputMatrix.h"
+#include<stdlib.h>
+#include "u_inputMatrix.h"
+#include "u_logStream.h"
 
 int main(){
     int i,j,k,n;
@@ -7,8 +9,10 @@ int main(){
     scanf("%d",&n);
 
     if (n<=0){
-        printf("Matrix size should be positive integer\n");
-        return -1;
+        NOTICE(POSITIVE_DOMAIN);   // Only Error is important, Warning and Notice
+        WARNING(POSITIVE_DOMAIN);  // are just put to suppress "Function Unused" warnings
+        ERROR(POSITIVE_DOMAIN);    // during compilation. Not ideal but ehh too much headache
+        exit(1);                   // to deal with
     }
 
     double matrixA[n][n],matrixB[n][n], answer[n][n];

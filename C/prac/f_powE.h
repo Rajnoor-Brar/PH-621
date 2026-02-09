@@ -1,5 +1,5 @@
 #pragma once
-#include"logStream.h"
+#include"u_logStream.h"
 
 double powE(double x){
 	int i, n=100, precisionAbort = 1, discontinue;

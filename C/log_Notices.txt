@@ -74,3 +74,9 @@ Notice (prac/logE.h : 28): Term (3.93412e-13) is below precision threshold (1e-1
 
 Notice (prac/powE.h : 14): Term (7.51284e-13) is below precision threshold (1e-12). Breaking at step 37. 
 
+Notice (prac/erf.h : 14): Term (-4.00385e-09) is below precision threshold (1e-08). Breaking at step 21. 
+
+Notice (prac/erf.h : 14): Term (-4.00385e-09) is below precision threshold (1e-08). Breaking at step 21. 
+
+Notice (prac/erf.h : 14): Term (-4.03672e-10) is below precision threshold (1e-08). Breaking at step 7. 
+

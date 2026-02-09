@@ -1,13 +1,17 @@
 #include<stdio.h>
-#include "inputMatrix.h"
+#include<stdlib.h>
+#include "u_inputMatrix.h"
+#include "u_logStream.h"
 
 int main(){
     int i,j,n;
     printf(" Enter size of square matrix N : "); scanf("%d",&n);
 
     if (n<=0){
-        printf("Matrix size should be positive integer\n");
-        return -1;
+        NOTICE(POSITIVE_DOMAIN);   // Only Error is important, Warning and Notice
+        WARNING(POSITIVE_DOMAIN);  // are just put to suppress "Function Unused" warnings
+        ERROR(POSITIVE_DOMAIN);    // during compilation
+        exit(1);
     }
 
     double matrix[n][n];

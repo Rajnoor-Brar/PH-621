@@ -1,7 +1,7 @@
-#pragma once
-#include"logStream.h"
+#include"u_logStream.h"
 
-double erf(double x, int n){
+#pragma once
+double erfunc(double x, int n){
     double result=0,term=1;
 	int i, precisionAbort = 1, discontinue = 0;
 
@@ -18,7 +18,7 @@ double erf(double x, int n){
 			NOTICE(PRECISION_REACHED_BREAK,term,precision,i);break;
 		}
 	}
-	if ( (term>precision && term>0) || (term<0 && term<(-1*precision)) ){
+	if ( precisionAbort && !discontinue){
 		WARNING(PRECISION_NOT_REACHED, term, precision);
 	}
 

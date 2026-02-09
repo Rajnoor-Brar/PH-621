@@ -1,9 +1,10 @@
 #pragma once
 
-#include"logE.h"
-#include"powE.h"
+#include"f_logE.h"
+#include"f_powE.h"
 #include<stdio.h>
-#include"logStream.h"
+#include"u_logStream.h"
+// #include"u_blocks.h"
 
 double zeta(double s, int maxTerms){
     int i,n, precisionAbort = 1, discontinue = 0;
@@ -22,8 +23,23 @@ double zeta(double s, int maxTerms){
 				break;
 			}
 	}
-
 	if (precisionAbort && !discontinue){ WARNING(PRECISION_NOT_REACHED, term, precision ); }
 
 	return result;
 }
+
+	
+	// World isnt ready for TERM_SERIES_PRECISIONBREAK 
+// double zeta(double s, int maxTerms){
+//     int i,n;
+//     (maxTerms<=0) ? (n=200) : (n=maxTerms); // default maxTerms = 200
+
+// 	double precision=1e-12 , ex =0, term, ns  = -1*s, result = 0;
+
+// 	Term_Series_BreakPrecision(term,result,precision,1,n,
+// 		term = powE(ns*logE(i));
+// 	);
+
+// 	return result;
+// }
+

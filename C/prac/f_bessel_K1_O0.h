@@ -1,3 +1,4 @@
+#pragma once
 double bessel_K1_O0(double x, int n){
 	int i;
 

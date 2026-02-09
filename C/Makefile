@@ -22,7 +22,6 @@ CFLAGS ?= -std=c17 -O2 -Wall -Wextra
 		echo "$@.c -> $@.exe"; \
 	else \
 		echo "No source file $@.c"; \
-		exit 1; \
 	fi
 
 %.exe: %.c
@@ -30,9 +29,8 @@ CFLAGS ?= -std=c17 -O2 -Wall -Wextra
 	@echo "$< -> $@"
 
 %.c:
-	SRC:=$(patsubst %.c,%,$@)
-	@$(CC) $(CPPFLAGS) $(CFLAGS) $@ -o $(SRC).exe $(LDFLAGS)
-	@echo "$@ -> $(SRC).exe"
+	@$(CC) $(CPPFLAGS) $(CFLAGS) $@ -o $(patsubst %.c,%,$@).exe $(LDFLAGS)
+	@echo "$@ -> $(patsubst %.c,%,$@).exe"
 
 
 clean:

@@ -2,3 +2,7 @@ Warning (prac/logE.h : 33): Term (0) has NOT dropped below precision threshold (
 
 Warning (prac/zeta.h : 25): Term (0.00101773) has NOT dropped below precision threshold (1e-12). Answer may not be accurate.
 
+Warning (prac/erf.h : 14): Term (0.0275199) has NOT dropped below precision threshold (1e-08). Answer may not be accurate.
+
+Warning (prac/erf.h : 14): Term (0.000136522) has NOT dropped below precision threshold (1e-08). Answer may not be accurate.
+

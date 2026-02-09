@@ -1,12 +1,13 @@
 #include"logStream.h"
 #include<stdlib.h>
+#include"blocks.h"
 
 #pragma once
 double logE(double x){ 
 
 	if (x <= 0.0){ERROR(POSITIVE_DOMAIN); exit(1);} 
 
-        int n=200,i,j, precisionAbort=1, discontinue=0;
+        int n=200,j;
         double precision=1e-12, ln2=0.6931471805599453;
         int pow2=0;
 
@@ -18,20 +19,10 @@ double logE(double x){
 
         double term=(x-1)/(x+1), xx= term*term, result=term;
 
-        for (i=2;i<=n;i++){
+        Term_Series_PrecisionBreak(term, result,2,n, precision,
                 j=2*i-1;
-                term*=xx;
-                result += term/j;
-
-                discontinue = precisionAbort && ( (term<precision && term>=0) || (term<0 && term>(-1*precision)) );
-                if(discontinue){
-                        NOTICE(PRECISION_REACHED_BREAK, term, precision, i);
-                        break;
-                }
-        }
-
-        if (precisionAbort && !discontinue){ WARNING(PRECISION_NOT_REACHED, term, precision); }
+                term*=xx/j;
+        );
 
         return ((2*result)+(ln2*pow2));
-
 }
