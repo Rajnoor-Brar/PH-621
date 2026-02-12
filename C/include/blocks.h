@@ -5,11 +5,13 @@ do{ \
     for(i=a;i<=n;i++){ \
     term_modifier \
     result+=term; \
-    discontinue = precisionAbort && ( (term<precision && term>0) || (term<0 && term>(-1*precision)) ); \
-        if (discontinue){ \
-            NOTICE(PRECISION_REACHED_BREAK,term,precision,i);\
-            break; \
-        }\
+    discontinue = precisionAbort && ( (term<precision && term>=0) || (term<0 && term>(-1*precision)) ); \
+ \
 	}\
     if (precisionAbort && !discontinue){ WARNING(PRECISION_NOT_REACHED, term, precision ); }\
 } while(0)
+
+    //    if (discontinue){ \
+    //         NOTICE(PRECISION_REACHED_BREAK,term,precision,i);\
+    //         break; \
+    //     }\

@@ -1,8 +1,20 @@
-Warning (prac/logE.h : 33): Term (0) has NOT dropped below precision threshold (1e-12). Answer may not be accurate.
+Warning [Thu Feb 12 15:24:56 2026]
+		L024  |  ./include/logE.h : 
+	Term (0) has NOT dropped below precision threshold (1e-12). Answer may not be accurate.
 
-Warning (prac/zeta.h : 25): Term (0.00101773) has NOT dropped below precision threshold (1e-12). Answer may not be accurate.
+Warning [Thu Feb 12 15:24:56 2026]
+		L014  |  ./include/powE.h : 
+	Term (0) has NOT dropped below precision threshold (1e-12). Answer may not be accurate.
 
-Warning (prac/erf.h : 14): Term (0.0275199) has NOT dropped below precision threshold (1e-08). Answer may not be accurate.
+Warning [Thu Feb 12 15:24:56 2026]
+		L026  |  ./include/zeta.h : 
+	Term (4.78619e-05) has NOT dropped below precision threshold (1e-12). Answer may not be accurate.
 
-Warning (prac/erf.h : 14): Term (0.000136522) has NOT dropped below precision threshold (1e-08). Answer may not be accurate.
+Warning [Thu Feb 12 15:27:00 2026]
+		L026  |  ./include/zeta.h : 
+	Term (2.88497e-05) has NOT dropped below precision threshold (1e-12). Answer may not be accurate.
+
+Warning [Thu Feb 12 23:16:08 2026]
+		L052  |  bisection.c : 
+	Loop has run too many iterations. Force stopping for safety.
 

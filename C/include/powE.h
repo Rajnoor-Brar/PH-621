@@ -3,7 +3,7 @@
 #include"blocks.h"
 
 double powE(double x){
-	int i, n=100, precisionAbort = 1, discontinue;
+	int n=100;
 
 	if (x < 0){return (1.0 / powE(-1*x));} // more accuracy this way for negative x
 

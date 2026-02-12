@@ -1,8 +1,8 @@
+#pragma once
 #include"logStream.h"
 #include<stdlib.h>
 #include"blocks.h"
 
-#pragma once
 double logE(double x){ 
 
 	if (x <= 0.0){ERROR(POSITIVE_DOMAIN); exit(1);} 
@@ -18,8 +18,7 @@ double logE(double x){
                 // x is scaled to [0.5, 2]
 
         double term=(x-1)/(x+1), xx= term*term, result=term;
-
-        Term_Series_PrecisionBreak(term, result,2,n, precision,
+        Term_Series_PrecisionBreak(term, result, precision,2,n,
                 j=2*i-1;
                 term*=xx/j;
         );

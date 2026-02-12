@@ -1,7 +1,7 @@
 #include<stdio.h>
 #include<stdlib.h>
-#include "u_inputMatrix.h"
-#include "u_logStream.h"
+#include "inputMatrix.h"
+#include "logStream.h"
 
 int main(){
     int i,j,n;

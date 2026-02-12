@@ -1,6 +1,6 @@
 #pragma once
-#include <stdio.h>
-void inputMatrix(size_t rows, size_t columns, double matrix[rows][columns]) {
+#include<stdio.h>
+void inputMatrix(size_t rows, size_t columns, double matrix[rows][columns]){
     int i,j,k, n = (int)rows, m = (int)columns;
     for ( i=0;i<n;i++){
         printf("\n");

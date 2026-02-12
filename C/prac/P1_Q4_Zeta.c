@@ -1,7 +1,7 @@
 #include<stdio.h>
-#include"f_logE.h"
-#include"f_powE.h"
-#include"f_zeta.h"
+#include"logE.h"
+#include"powE.h"
+#include"zeta.h"
 
 int main(){
 	double s;	int n;

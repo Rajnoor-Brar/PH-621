@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include "f_erf.h"
+#include "erf.h"
 
 int main(){
 	double x, result;
