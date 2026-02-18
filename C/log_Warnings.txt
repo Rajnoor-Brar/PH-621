@@ -18,3 +18,39 @@ Warning [Thu Feb 12 23:16:08 2026]
 		L052  |  bisection.c : 
 	Loop has run too many iterations. Force stopping for safety.
 
+Warning [Wed Feb 18 14:31:59 2026]
+		L071  |  newton_raphson_complex.c : 
+	Loop has run iteration limit of 10 without convergence. Force stopping for safety.
+
+Warning [Wed Feb 18 14:32:42 2026]
+		L071  |  newton_raphson_complex.c : 
+	Loop has run iteration limit of 2 without convergence. Force stopping for safety.
+
+Warning [Wed Feb 18 14:34:13 2026]
+		L072  |  newton_raphson_complex.c : 
+	Loop has run iteration limit of 2 without convergence. Force stopping for safety.
+
+Warning [Wed Feb 18 14:34:59 2026]
+		L072  |  newton_raphson_complex.c : 
+	Loop has run iteration limit of 2 without convergence. Force stopping for safety.
+
+Warning [Wed Feb 18 14:36:26 2026]
+		L072  |  newton_raphson_complex.c : 
+	Loop has run iteration limit of 2 without convergence. Force stopping for safety.
+
+Warning [Wed Feb 18 14:36:58 2026]
+		L071  |  newton_raphson_complex.c : 
+	Loop has run iteration limit of 2 without convergence. Force stopping for safety.
+
+Warning [Wed Feb 18 14:38:08 2026]
+		L071  |  newton_raphson_complex.c : 
+	Loop has run iteration limit of 2 without convergence. Force stopping for safety.
+
+Warning [Wed Feb 18 14:41:00 2026]
+		L071  |  newton_raphson_complex.c : 
+	Loop has run iteration limit of 2 without convergence. Force stopping for safety.
+
+Warning [Wed Feb 18 14:41:49 2026]
+		L071  |  newton_raphson_complex.c : 
+	Loop has run iteration limit of 2 without convergence. Force stopping for safety.
+

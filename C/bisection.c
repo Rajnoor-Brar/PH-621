@@ -12,7 +12,7 @@ void bisect(double a, double b){
     double r,s,y,q,c,diff, threshold;
     int iter=0;
 
-    int tmp = (int)fabs(fmax(a,b)), digs=0, decimals=15, maxIter=10000;
+    int tmp = (int)fmax(fabs(a),fabs(b)), digs=0, decimals=15, maxIter=10000;
 
     while (tmp>0){tmp/=10; digs++;}
 
