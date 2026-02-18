@@ -9,12 +9,7 @@ int main(){
     printf("\033[A\r\033[J Enter size of matrix %d x M : ",n);scanf("%d",&m);
     printf("\033[A\r\033[J Enter size of matrix %d x %d",n,m);
 
-    if (n<=0 || m<0){
-        NOTICE(POSITIVE_DOMAIN);   // Only Error is important, Warning and Notice
-        WARNING(POSITIVE_DOMAIN);  // are just put to suppress "Function Unused" warnings
-        ERROR(POSITIVE_DOMAIN);    // during compilation
-        exit(1);
-    }
+    if (n<=0){ERROR(POSITIVE_DOMAIN); exit(1);}
 
     double matrix[n][m];
 

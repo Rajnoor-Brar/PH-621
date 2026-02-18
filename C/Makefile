@@ -12,7 +12,7 @@ else
     LD := ld
 endif
 
-CFLAGS ?= -std=c17 -O2 -Wall -Wextra
+CFLAGS ?= -std=c2x -O0 -g -Wall -Wextra
 
 .PHONY: clean cleanall
 

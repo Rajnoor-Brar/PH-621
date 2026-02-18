@@ -16,13 +16,8 @@ void bisect(double a, double b){
 
     while (tmp>0){tmp/=10; digs++;}
 
-    // FILE *bisectionLog = fopen("bisectionLog.txt","w");
-    // fprintf(bisectionLog,"%*c c %*c|%*c f(c)\n",
-    //     (digs+decimals+2)/2,' ',(digs+decimals)/2,' ',(digs+decimals+2)/2,' ');
-
     logInitialise("bisection");
-    streamLog("%*c c %*c|%*c f(c)\n",
-        (digs+decimals+2)/2,' ',(digs+decimals)/2,' ',(digs+decimals+2)/2,' ');
+    streamLog("%*c c %*c|%*c f(c)\n", (digs+decimals+2)/2,' ',(digs+decimals)/2,' ',(digs+decimals+2)/2,' ');
 
     r=func(a);  s=func(b);
     y=r*s;  diff=1e-12, threshold=1e-12;  c=0;q=0;
@@ -43,11 +38,8 @@ void bisect(double a, double b){
             if (q == 0.0) {break;} 
             else {(q*r<0) ? (b=c) : (a=c);}
 
-            streamLog(" %*.*lf | %*.*lf \n",
-                digs+decimals+2,decimals,c,digs+decimals+2,decimals,q);
+            streamLog(" %*.*lf | %*.*lf \n", digs+decimals+2,decimals,c,digs+decimals+2,decimals,q);
             
-            // fprintf(bisectionLog," %*.*lf | %*.*lf \n",
-            //     digs+decimals+2,decimals,c,digs+decimals+2,decimals,q);
             if(++iter>maxIter){
                 WARNING(UNSTOPPING_LOOP);
                 break;
@@ -57,7 +49,6 @@ void bisect(double a, double b){
         printf("Value of root is %.10lf\n", c); printf("Number of iterations: %d\n", iter); return;
     }
     logClose();
-    // fclose(bisectionLog);
     return;
 }
 // --------------------------------------------------------------------------------------------------

@@ -3,11 +3,17 @@
 #include<stdlib.h>
 #include<time.h>
 #include<stdarg.h>
+// #pragma GCC diagnostic ignored "-Wunused-function"
+// #pragma clang diagnostic ignored "-Wunused-function"
 
 static FILE *logStream = NULL;
 
-void logInitialise(char *stream){
+static inline void logInitialise(char *stream){
     char name[256];
+    if (logStream){
+        fclose(logStream);
+        logStream = NULL;
+    }
     snprintf(name, sizeof name, "log_st_%s.txt", stream);
     logStream = fopen(name, "w");
     if (!logStream) {
@@ -16,14 +22,14 @@ void logInitialise(char *stream){
     }
 }
 
-void logClose(void){
+static inline void logClose(void){
     if (logStream) {
         fclose(logStream);
         logStream = NULL;
     }
 }
 
-void streamLog(const char *fmt, ...){
+static inline void streamLog(const char *fmt, ...){
     if (!logStream) {
         fprintf(stderr, "Log stream not initialized. Call logInitialise() first.\n");
         return;
@@ -46,7 +52,7 @@ static struct tm* timeFormat = NULL;
 
 static time_t timeValue;
 
-char *currentTime(void){
+static char *currentTime(void){
     time(&timeValue);
     timeFormat = localtime(&timeValue);
     char *timeString = asctime(timeFormat);
@@ -54,7 +60,7 @@ char *currentTime(void){
     return timeString;
 }
 
-static FILE *warningLog(void)
+static inline FILE *warningLog(void)
 {
     if (!warningFile) {
         warningFile = fopen("log_Warnings.txt", "a+");
@@ -66,7 +72,7 @@ static FILE *warningLog(void)
     return warningFile;
 }
 
-static FILE *noticeLog(void)
+static inline FILE *noticeLog(void)
 {
     if (!noticeFile) {
         noticeFile = fopen("log_Notices.txt", "a+");
@@ -131,4 +137,9 @@ static FILE *noticeLog(void)
 
 #define UNSTOPPING_LOOP \
     "Loop has run too many iterations. Force stopping for safety."
+    
+#define INFINITE_LOOP \
+    "Invalid Break Condition. Force stopping for safety."
 
+#define DISTANT_CONVERGENCE \
+    "Loop has run iteration limit of %d without convergence. Force stopping for safety."

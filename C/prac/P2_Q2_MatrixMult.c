@@ -8,12 +8,7 @@ int main(){
     printf("Enter size of square matrices, n : ");
     scanf("%d",&n);
 
-    if (n<=0){
-        NOTICE(POSITIVE_DOMAIN);   // Only Error is important, Warning and Notice
-        WARNING(POSITIVE_DOMAIN);  // are just put to suppress "Function Unused" warnings
-        ERROR(POSITIVE_DOMAIN);    // during compilation. Not ideal but ehh too much headache
-        exit(1);                   // to deal with
-    }
+    if (n<=0){ERROR(POSITIVE_DOMAIN); exit(1);}
 
     double matrixA[n][n],matrixB[n][n], answer[n][n];
 
