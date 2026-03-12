@@ -16,6 +16,7 @@ int main(){
 		snprintf(excitedName, sizeof excitedName, "excited_%02d.dat",i-1);
 		stateLog = fopen(excitedName,"w");
 		if(stateLog==NULL){printf("file error");return 0;}
+
 		count=0;
 		k=i*pi/length;
 		for(x=boxLeft;x<boxRight;x+=interval){
