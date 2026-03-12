@@ -12,7 +12,7 @@ else
     LD := ld
 endif
 
-CFLAGS ?= -std=c2x -O0 -g -Wall -Wextra
+CFLAGS ?= -std=c2x -O0  -Wall -Wextra
 
 .PHONY: clean cleanall
 
@@ -37,4 +37,5 @@ clean:
 	rm -f *.exe
 
 cleanall:
-	rm -f */*.exe
+	@rm -f */*.exe
+	@echo "Executables removed"

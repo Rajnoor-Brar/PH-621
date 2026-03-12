@@ -1,0 +1,8 @@
+Notice [Wed Feb 18 18:09:32 2026]
+		L021  |  './include/zeta.h'  : 
+	Term (3.18733e-13) is below precision threshold (1e-12). Breaking at step 11.
+
+Notice [Sat Feb 21 13:16:05 2026]
+		L021  |  './include/zeta.h'  : 
+	Term (3.18733e-13) is below precision threshold (1e-12). Breaking at step 11.
+

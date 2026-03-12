@@ -14,7 +14,7 @@ static inline void logInitialise(char *stream){
         fclose(logStream);
         logStream = NULL;
     }
-    snprintf(name, sizeof name, "log_st_%s.txt", stream);
+    snprintf(name, sizeof name, "logs/out_%s.log", stream);
     logStream = fopen(name, "w");
     if (!logStream) {
         perror("fopen");
@@ -48,6 +48,8 @@ static FILE *warningFile = NULL;
 
 static FILE *noticeFile = NULL;
 
+static FILE *errorFile = NULL;
+
 static struct tm* timeFormat = NULL;
 
 static time_t timeValue;
@@ -60,10 +62,22 @@ static char *currentTime(void){
     return timeString;
 }
 
+static inline FILE *errorLog(void)
+{
+    if (!noticeFile) {
+        noticeFile = fopen("logs/sErrors.log", "a+");
+        if (!noticeFile) {
+            perror("fopen");
+            exit(EXIT_FAILURE);
+        }
+    }
+    return noticeFile;
+}
+
 static inline FILE *warningLog(void)
 {
     if (!warningFile) {
-        warningFile = fopen("log_Warnings.txt", "a+");
+        warningFile = fopen("logs/sWarnings.log", "a+");
         if (!warningFile) {
             perror("fopen");
             exit(EXIT_FAILURE);
@@ -75,7 +89,7 @@ static inline FILE *warningLog(void)
 static inline FILE *noticeLog(void)
 {
     if (!noticeFile) {
-        noticeFile = fopen("log_Notices.txt", "a+");
+        noticeFile = fopen("logs/sNotices.log", "a+");
         if (!noticeFile) {
             perror("fopen");
             exit(EXIT_FAILURE);
@@ -84,16 +98,20 @@ static inline FILE *noticeLog(void)
     return noticeFile;
 }
 
+
+
 #define ERROR(fmt, ...) \
     fprintf(stderr, "(\033[1m%s\033[22m : %d) Error : " fmt "\n\n", \
-            __FILE__, __LINE__, ##__VA_ARGS__)
+            __FILE__, __LINE__, ##__VA_ARGS__);\
+    fprintf(errorLog(), "Error [%s]\n\t\tL%03d  |  \'%s\' : \n\t" fmt "\n\n", \
+            currentTime(), __LINE__, __FILE__, ##__VA_ARGS__)
 
 #define WARNING(fmt, ...) \
-    fprintf(warningLog(), "Warning [%s]\n\t\tL%03d  |  %s : \n\t" fmt "\n\n", \
+    fprintf(warningLog(), "Warning [%s]\n\t\tL%03d  |  \'%s\' : \n\t" fmt "\n\n", \
             currentTime(), __LINE__, __FILE__, ##__VA_ARGS__)
 
 #define NOTICE(fmt, ...) \
-    fprintf(noticeLog(), "Notice [%s]\n\t\tL%03d  |  %s  : \n\t" fmt "\n\n", \
+    fprintf(noticeLog(), "Notice [%s]\n\t\tL%03d  |  \'%s\'  : \n\t" fmt "\n\n", \
             currentTime(), __LINE__, __FILE__, ##__VA_ARGS__)
 
 // input arguments ( TERM VALUE , PRECISION THRESHOLD, STEP NUMBER )
@@ -137,7 +155,7 @@ static inline FILE *noticeLog(void)
 
 #define UNSTOPPING_LOOP \
     "Loop has run too many iterations. Force stopping for safety."
-    
+
 #define INFINITE_LOOP \
     "Invalid Break Condition. Force stopping for safety."
 

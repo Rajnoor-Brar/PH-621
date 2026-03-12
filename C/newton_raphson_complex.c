@@ -2,7 +2,7 @@
 #include <math.h>
 #include "logStream.h"
 
-#define LOGGING 1
+#define LOGGING 0
 
 double u(double x, double y){
     return (exp(x)*cos(y)-1);
@@ -33,8 +33,16 @@ double J(double x, double y){
 }
 
 int main(){
-    double x=80.3,y=32,f_u,f_v,f_ux,f_uy,f_vx,f_vy,f_J, precision=1e-12;
+    double x=5,y=5,f_u,f_v,f_ux,f_uy,f_vx,f_vy,f_J, precision=1e-12;
     int maxIter=10000, iter=0;
+
+    FILE *inputFile = fopen("inputs/newt_raph_complex.in", "r");
+    if (!inputFile) {
+        perror("fopen");
+        return 1;
+    }
+    fscanf(inputFile,"%lf %lf %lf %d",&x,&y,&precision,&maxIter);
+    fclose(inputFile);
 
     f_u = u(x,y); f_v = v(x,y); f_ux = u_x(x,y); f_uy = u_y(x,y); f_vx = v_x(x,y); f_vy = v_y(x,y);
 

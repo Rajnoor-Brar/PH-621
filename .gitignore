@@ -3,7 +3,7 @@
 *.csv
 *.tsv
 *.dat
-*.log
+# *.log
 *.png
 *.jpg
 *.jpeg

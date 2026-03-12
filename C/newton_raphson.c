@@ -2,7 +2,7 @@
 #include <math.h>
 #include "logStream.h"
 
-#define LOGGING 1
+#define LOGGING 0
 double f(double x){
     return x*cos(x)-sin(x);
 }
@@ -14,6 +14,14 @@ double df(double x){
 int main(){
     double x=12,fn,dfn, precision=1e-12;
     int maxIter=10000, iter=0;
+
+    FILE *inputFile = fopen("inputs/newt_raph.in", "r");
+    if (!inputFile) {
+        perror("fopen");
+        return 1;
+    }
+    fscanf(inputFile,"%lf %lf %d",&x,&precision,&maxIter);
+    fclose(inputFile);
 
     fn = f(x); dfn = df(x);
 
@@ -34,7 +42,7 @@ int main(){
     #endif
 
     while(fabs(fn)>precision){
-         #if LOGGING
+        #if LOGGING
             streamLog("%4d | %*.*lf | %*.*lf \n",iter, tInDig,decDigs,x, tOutDig,decDigs,fn);
         #endif
 
